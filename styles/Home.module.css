@@ -1,0 +1,152 @@
+/* Garante que o container ocupe 100% da altura e largura da tela */
+.container {
+  min-height: 100vh; /* Ocupa 100% da altura da tela */
+  width: 100%; /* Ocupa 100% da largura da tela */
+  padding: 20px;
+  background-color: #000;
+  color: #fff;
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* Cabeçalho, conteúdo principal, rodapé */
+  gap: 20px; /* Espaço entre as seções */
+}
+
+.title {
+  text-align: center;
+  color: #fff; /* Título branco */
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 600px; /* Limita a largura do formulário */
+  margin: 0 auto; /* Centraliza o formulário */
+}
+
+.form input {
+  padding: 10px;
+  border: 1px solid #fff; /* Borda branca */
+  background-color: #000;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.form button {
+  padding: 10px;
+  background-color: #fff; /* Fundo branco */
+  color: #000; /* Texto preto */
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.form button:hover {
+  background-color: #ccc; /* Cor mais clara para o hover */
+}
+
+.subtitle {
+  color: #fff; /* Subtítulo branco */
+  font-size: 1.5rem;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.productList {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  max-width: 1200px; /* Limita a largura da lista */
+  margin: 0 auto; /* Centraliza a lista */
+}
+
+.productItem {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Layout responsivo */
+  gap: 10px; /* Espaço entre os itens */
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #fff; /* Borda branca */
+  font-size: 1rem;
+}
+
+.productItem span {
+  text-align: center;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.editIcon,
+.deleteIcon {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #fff; /* Ícones brancos */
+}
+
+.editIcon:hover {
+  color: #ccc; /* Cor mais clara para o hover */
+}
+
+.deleteIcon:hover {
+  color: #ff0000; /* Vermelho para o hover */
+}
+
+.chartContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.error {
+  color: #ff0000;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Estilos responsivos para dispositivos móveis */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .form input,
+  .form button {
+    font-size: 0.9rem;
+  }
+
+  .productItem {
+    grid-template-columns: 1fr; /* Uma coluna em telas pequenas */
+  }
+
+  .productItem span {
+    text-align: left;
+  }
+
+  .actions {
+    justify-content: flex-start;
+  }
+
+  .chartContainer {
+    width: 90%;
+  }
+}
